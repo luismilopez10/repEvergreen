@@ -4,15 +4,15 @@ using System.Net.Http;
 
 namespace pryEvergreenMensajeria.NUnit
 {
-    public class tscCanal
+    public class tscDestinatario
     {
 
         //------------Ingresar------------
         [Test]
-        public void fncIngresarCanalTest()
+        public void fncIngresarDestinatarioTest()
         {
             // API Azure
-            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Canal/fncIngresarCanal?strTipoCanal=AAA";
+            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Destinatario/fncIngresarDestinatario?strNombre=AAA&strEmail=AAA&strTelefono=000";
 
             HttpClient objHttpClient = new HttpClient();
             HttpResponseMessage objHttpResponseMessage = new HttpResponseMessage();
@@ -24,10 +24,10 @@ namespace pryEvergreenMensajeria.NUnit
 
         //------------Consultar------------
         [Test]
-        public void fncConsultarCanalTest()
+        public void fncConsultarDestinatarioTest()
         {
             // API Azure
-            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Canal/fncConsultarCanal";
+            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Destinatario/fncConsultarDestinatario";
 
             HttpClient objHttpClient = new HttpClient();
             HttpResponseMessage objHttpResponseMessage = new HttpResponseMessage();
@@ -38,10 +38,10 @@ namespace pryEvergreenMensajeria.NUnit
 
 
         [Test]
-        public void fncConsultarCanalIdTest()
+        public void fncConsultarDestinatarioIdTest()
         {
             // API Azure
-            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Canal/fncConsultarCanalId?intIdCanal=1";
+            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Destinatario/fncConsultarDestinatarioId?intIdDestinatario=1";
 
             HttpClient objHttpClient = new HttpClient();
             HttpResponseMessage objHttpResponseMessage = new HttpResponseMessage();

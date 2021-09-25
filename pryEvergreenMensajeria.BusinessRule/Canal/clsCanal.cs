@@ -25,5 +25,10 @@ namespace pryEvergreenMensajeria.BusinessRule.Canal
         {
             return objOptCanal.fncConsultarCanal(objMdlCanal);
         }
+
+        public List<mdlCanal> fncConsultarCanalId(mdlCanal objMdlCanal)
+        {
+            return objOptCanal.fncConsultarCanalId(objMdlCanal);
+        }
     }
 }

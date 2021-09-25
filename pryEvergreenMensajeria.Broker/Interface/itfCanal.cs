@@ -10,5 +10,6 @@ namespace pryEvergreenMensajeria.Broker.Interface
     {
         string fncIngresarCanal(mdlCanal objMdlCanal);
         List<mdlCanal> fncConsultarCanal(mdlCanal objMdlCanal);
+        List<mdlCanal> fncConsultarCanalId(mdlCanal objMdlCanal);
     }
 }

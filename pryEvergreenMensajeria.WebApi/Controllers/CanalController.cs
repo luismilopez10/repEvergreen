@@ -32,5 +32,14 @@ namespace pryEvergreenMensajeria.WebApi.Controllers
             clsCanal objClsCanal = new clsCanal();
             return objClsCanal.fncConsultarCanal(objMdlCanal);
         }
+
+        [HttpGet("fncConsultarCanalId")]
+        public List<mdlCanal> fncConsultarCanalId(int intIdCanal)
+        {
+            mdlCanal objMdlCanal = new mdlCanal();
+            clsCanal objClsCanal = new clsCanal();
+            objMdlCanal.intIdCanal = intIdCanal;
+            return objClsCanal.fncConsultarCanalId(objMdlCanal);
+        }
     }
 }

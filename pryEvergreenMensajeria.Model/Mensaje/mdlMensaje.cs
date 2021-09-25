@@ -8,7 +8,6 @@ namespace pryEvergreenMensajeria.Model.Mensaje
     {
         public int intIdMensaje { get; set; }
         public int intIdCanal { get; set; }
-        public string strTipoCanal { get; set; }
         public int intIdDestinatario { get; set; }
         public string strAsunto { get; set; }
         public string strCuerpo { get; set; }

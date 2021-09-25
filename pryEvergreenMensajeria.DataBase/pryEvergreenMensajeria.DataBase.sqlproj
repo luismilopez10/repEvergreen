@@ -61,6 +61,7 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\Stored Procedures\Canal" />
     <Folder Include="dbo\Stored Procedures\Mensaje" />
+    <Folder Include="dbo\Stored Procedures\Destinatario" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Stored Procedures\Canal\spaConsultarCanal.sql" />
@@ -70,5 +71,9 @@
     <Build Include="dbo\Stored Procedures\Mensaje\spaIngresarMensaje.sql" />
     <Build Include="dbo\Stored Procedures\Mensaje\spaConsultarMensaje.sql" />
     <Build Include="dbo\Tables\tblDestinatario.sql" />
+    <Build Include="dbo\Stored Procedures\Destinatario\spaConsultarDestinatario.sql" />
+    <Build Include="dbo\Stored Procedures\Destinatario\spaIngresarDestinatario.sql" />
+    <Build Include="dbo\Stored Procedures\Canal\spaConsultarCanalId.sql" />
+    <Build Include="dbo\Stored Procedures\Destinatario\spaConsultarDestinatarioId.sql" />
   </ItemGroup>
 </Project>

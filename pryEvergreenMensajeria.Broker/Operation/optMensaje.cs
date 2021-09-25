@@ -99,7 +99,6 @@ namespace pryEvergreenMensajeria.Broker.Operation
                     objMdlMensaje = new mdlMensaje();
                     objMdlMensaje.intIdMensaje = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdMensaje"].ToString());
                     objMdlMensaje.intIdCanal = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdCanal"].ToString());
-                    objMdlMensaje.strTipoCanal = Convert.ToString(objDst.Tables[0].Rows[i]["strTipoCanal"].ToString());
                     objMdlMensaje.intIdDestinatario = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdDestinatario"].ToString());
                     objMdlMensaje.strAsunto = Convert.ToString(objDst.Tables[0].Rows[i]["strAsunto"].ToString());
                     objMdlMensaje.strCuerpo = Convert.ToString(objDst.Tables[0].Rows[i]["strCuerpo"].ToString());
