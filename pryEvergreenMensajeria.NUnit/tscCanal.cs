@@ -8,10 +8,10 @@ namespace pryEvergreenMensajeria.NUnit
     {
 
         //------------Ingresar------------
-        [TestCase]
         [Test]
-        public void fncIngresarCanalTestCase1()
+        public void fncIngresarCanalTest()
         {
+            // API Azure
             string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Canal/fncIngresarCanal?strTipoCanal=AAA";
 
             HttpClient objHttpClient = new HttpClient();
@@ -23,10 +23,10 @@ namespace pryEvergreenMensajeria.NUnit
 
 
         //------------Consultar------------
-        [TestCase]
         [Test]
-        public void fncConsultarCanalTestCase1()
+        public void fncConsultarCanalTest()
         {
+            // API Azure
             string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Canal/fncConsultarCanal";
 
             HttpClient objHttpClient = new HttpClient();

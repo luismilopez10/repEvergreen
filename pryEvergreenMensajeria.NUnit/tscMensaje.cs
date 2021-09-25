@@ -8,11 +8,12 @@ namespace pryEvergreenMensajeria.NUnit
     {
 
         //------------Ingresar------------
-        [TestCase]
         [Test]
         public void fncIngresarMensajeTest()
         {
-            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Mensaje/fncIngresarMensaje?intIdCanal=1&strAsunto=Prueba&strCuerpo=Mensaje%20de%20prueba&strRemitente=000&strDestinatario=111";
+            // API Azure
+            string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Mensaje/fncIngresarMensaje?intIdCanal=1&intIdDestinatario=1&strAsunto=Prueba&strCuerpo=Mensaje%20de%20prueba&strRemitente=000";
+
 
             HttpClient objHttpClient = new HttpClient();
             HttpResponseMessage objHttpResponseMessage = new HttpResponseMessage();
@@ -23,10 +24,10 @@ namespace pryEvergreenMensajeria.NUnit
 
 
         //------------Consultar------------
-        [TestCase]
         [Test]
         public void fncConsultarMensajeTest()
         {
+            // API Azure
             string strURL = @"https://pryevergreenmensajeriawebapi20210924150107.azurewebsites.net/api/Mensaje/fncConsultarMensaje";
 
             HttpClient objHttpClient = new HttpClient();

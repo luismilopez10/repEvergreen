@@ -69,5 +69,6 @@
     <Build Include="dbo\Tables\tblMensaje.sql" />
     <Build Include="dbo\Stored Procedures\Mensaje\spaIngresarMensaje.sql" />
     <Build Include="dbo\Stored Procedures\Mensaje\spaConsultarMensaje.sql" />
+    <Build Include="dbo\Tables\tblDestinatario.sql" />
   </ItemGroup>
 </Project>

@@ -17,19 +17,19 @@ namespace pryEvergreenMensajeria.WebApi.Controllers
     {
 
         [HttpGet("fncIngresarMensaje")]
-        public string fncIngresarMensaje(int intIdCanal, string strAsunto, string strCuerpo, string strRemitente, string strDestinatario)
+        public string fncIngresarMensaje(int intIdCanal, int intIdDestinatario, string strAsunto, string strCuerpo, string strRemitente)
         {
             mdlMensaje objMdlMensaje = new mdlMensaje();
             clsMensaje objClsMensaje = new clsMensaje();
             objMdlMensaje.intIdCanal = intIdCanal;
+            objMdlMensaje.intIdDestinatario = intIdDestinatario;
             objMdlMensaje.strAsunto = strAsunto;
             objMdlMensaje.strCuerpo = strCuerpo;
             objMdlMensaje.strRemitente = strRemitente;
-            objMdlMensaje.strDestinatario = strDestinatario;
             return objClsMensaje.fncIngresarMensaje(objMdlMensaje);
         }
 
-        [HttpPost("fncConsultarMensaje")]
+        [HttpGet("fncConsultarMensaje")]
         public List<mdlMensaje> fncConsultarMensaje()
         {
             mdlMensaje objMdlMensaje = new mdlMensaje();

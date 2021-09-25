@@ -14,7 +14,7 @@ namespace pryEvergreenMensajeria.Broker.Operation
     public class optMensaje : itfMensaje
     {
         // Base de Datos Local
-        //string strConnectionString = @"Data Source=DESKTOP-PHVSG8C;User ID=evergreen;Password=evergreen;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //string strConnectionString = @"Data Source=DESKTOP-PHVSG8C;Initial Catalog=dbaEvergreen;User ID=evergreen;Password=evergreen;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         // Base de Datos Azure
         string strConnectionString = @"Server=tcp:lmlopezl.database.windows.net,1433;Initial Catalog=dbaEvergreen;Persist Security Info=False;User ID=lmlopezl;Password=6PPaBdKBnAgMmb3;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
@@ -45,10 +45,10 @@ namespace pryEvergreenMensajeria.Broker.Operation
                 objCom = new SqlCommand(objSpaMensaje.spaIngresarMensaje, objCon);
                 objCom.CommandType = CommandType.StoredProcedure;
                 objCom.Parameters.AddWithValue("@intIdCanal", objMdlMensaje.intIdCanal);
+                objCom.Parameters.AddWithValue("@intIdDestinatario", objMdlMensaje.intIdDestinatario);
                 objCom.Parameters.AddWithValue("@strAsunto", objMdlMensaje.strAsunto);
                 objCom.Parameters.AddWithValue("@strCuerpo", objMdlMensaje.strCuerpo);
                 objCom.Parameters.AddWithValue("@strRemitente", objMdlMensaje.strRemitente);
-                objCom.Parameters.AddWithValue("@strDestinatario", objMdlMensaje.strDestinatario);
                 intResultado = objCom.ExecuteNonQuery();
 
                 if (intResultado > 0)
@@ -100,10 +100,10 @@ namespace pryEvergreenMensajeria.Broker.Operation
                     objMdlMensaje.intIdMensaje = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdMensaje"].ToString());
                     objMdlMensaje.intIdCanal = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdCanal"].ToString());
                     objMdlMensaje.strTipoCanal = Convert.ToString(objDst.Tables[0].Rows[i]["strTipoCanal"].ToString());
+                    objMdlMensaje.intIdDestinatario = Convert.ToInt32(objDst.Tables[0].Rows[i]["intIdDestinatario"].ToString());
                     objMdlMensaje.strAsunto = Convert.ToString(objDst.Tables[0].Rows[i]["strAsunto"].ToString());
                     objMdlMensaje.strCuerpo = Convert.ToString(objDst.Tables[0].Rows[i]["strCuerpo"].ToString());
                     objMdlMensaje.strRemitente = Convert.ToString(objDst.Tables[0].Rows[i]["strRemitente"].ToString());
-                    objMdlMensaje.strDestinatario = Convert.ToString(objDst.Tables[0].Rows[i]["strDestinatario"].ToString());
                     objMdlMensaje.blnActivo = Convert.ToBoolean(objDst.Tables[0].Rows[i]["blnActivo"].ToString());
                     objMdlMensaje.dtmActualiza = Convert.ToDateTime(objDst.Tables[0].Rows[i]["dtmActualiza"].ToString());
                     lstMensaje.Add(objMdlMensaje);

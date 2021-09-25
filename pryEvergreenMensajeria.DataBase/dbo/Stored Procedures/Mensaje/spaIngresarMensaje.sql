@@ -1,11 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spaIngresarMensaje]
 	@intIdCanal INT = 0,
+	@intIdDestinatario INT = 0,
 	@strAsunto NVARCHAR(MAX) = '',
 	@strCuerpo NVARCHAR(MAX) = '',
-	@strRemitente NVARCHAR(MAX) = '',
-	@strDestinatario NVARCHAR(MAX) = ''
+	@strRemitente NVARCHAR(MAX) = ''
 AS
 	BEGIN
-		INSERT INTO tblMensaje(intIdCanal, strAsunto, strCuerpo, strRemitente, strDestinatario)
-		VALUES (@intIdCanal, @strAsunto, @strCuerpo, @strRemitente, @strDestinatario)
+		INSERT INTO tblMensaje(intIdCanal, intIdDestinatario, strAsunto, strCuerpo, strRemitente)
+		VALUES (@intIdCanal, @intIdDestinatario, @strAsunto, @strCuerpo, @strRemitente)
 	END

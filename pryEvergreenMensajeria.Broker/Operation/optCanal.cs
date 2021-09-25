@@ -14,7 +14,7 @@ namespace pryEvergreenMensajeria.Broker.Operation
     public class optCanal : itfCanal
     {
         // Base de Datos Local
-        //string strConnectionString = @"Data Source=DESKTOP-PHVSG8C;User ID=evergreen;Password=evergreen;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //string strConnectionString = @"Data Source=DESKTOP-PHVSG8C;Initial Catalog=dbaEvergreen;User ID=evergreen;Password=evergreen;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         // Base de Datos Azure
         string strConnectionString = @"Server=tcp:lmlopezl.database.windows.net,1433;Initial Catalog=dbaEvergreen;Persist Security Info=False;User ID=lmlopezl;Password=6PPaBdKBnAgMmb3;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";

@@ -25,7 +25,7 @@ namespace pryEvergreenMensajeria.WebApi.Controllers
             return objClsCanal.fncIngresarCanal(objMdlCanal);
         }
 
-        [HttpPost("fncConsultarCanal")]
+        [HttpGet("fncConsultarCanal")]
         public List<mdlCanal> fncConsultarCanal()
         {
             mdlCanal objMdlCanal = new mdlCanal();
