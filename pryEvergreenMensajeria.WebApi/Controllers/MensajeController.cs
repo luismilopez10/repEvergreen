@@ -29,7 +29,7 @@ namespace pryEvergreenMensajeria.WebApi.Controllers
             return objClsMensaje.fncIngresarMensaje(objMdlMensaje);
         }
 
-        [HttpGet("fncConsultarMensaje")]
+        [HttpPost("fncConsultarMensaje")]
         public List<mdlMensaje> fncConsultarMensaje()
         {
             mdlMensaje objMdlMensaje = new mdlMensaje();
